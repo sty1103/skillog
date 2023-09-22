@@ -10,7 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "push:dev": "npm run build:dev && git push -u origin dev && npm run dev",
-    "push:prod": "npm run build:prod && git push -u origin dev && npm run dev"
+    "push:prod": "npm run build:prod && git push -u origin prod && npm run prod"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.35.3",
