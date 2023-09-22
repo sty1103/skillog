@@ -3,20 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "dotenv -e .env.local next dev",
+    "build:prod": "dotenv -e .env.prod next build",
+    "build:dev": "dotenv -e .env.dev next build",
+    "build:local": "dotenv -e .env.local next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "push:dev": "npm run build:dev && git push -u origin dev && npm run dev",
+    "push:prod": "npm run build:prod && git push -u origin dev && npm run dev"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.35.3",
     "@types/node": "20.6.3",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
+    "dotenv-cli": "^7.3.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.2",
     "next": "13.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "recoil": "^0.7.7",
+    "sass": "^1.68.0",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
   }
 }
