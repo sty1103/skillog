@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "dotenv -e .env.local next dev",
+    "local": "dotenv -e .env.local next dev",
+    "dev": "dotenv -e .env.dev next dev",
+    "prod": "dotenv -e .env.prod next dev",
     "build:prod": "dotenv -e .env.prod next build",
     "build:dev": "dotenv -e .env.dev next build",
     "build:local": "dotenv -e .env.local next build",
